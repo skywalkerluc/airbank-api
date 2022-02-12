@@ -27,5 +27,8 @@
     "apollo-server-express": "^3.6.3",
     "express": "^4.17.2",
     "graphql": "^16.3.0"
+  },
+  "prisma": {
+    "schema": "src/prisma/schema.prisma"
   }
 }

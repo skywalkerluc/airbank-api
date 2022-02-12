@@ -1,15 +1,14 @@
 import { transactions } from './data/tempDatabase';
-// TODO: update to target postgres
-// TODO: rename alias from parent to "dot"
+import prisma from './prisma/client';
 
 const resolvers = {
   Query: {
-    transactions: (parent: any, args: any) => {
-      return transactions
+    transactions: () => {
+      return prisma.transactions.findMany();
     },
     transactionsAtRange: (parent: any, args: any) => {
       // create filter
-      return transactions;
+      return prisma.transactions.findMany();
     }
   }
 }

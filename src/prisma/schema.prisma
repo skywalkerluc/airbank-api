@@ -11,7 +11,8 @@ datasource db {
 }
 
 model Transaction {
-  id              String     @id
+  prismaId        Int       @id @default(autoincrement())
+  id              String
   account         String
   description     String?
   category        String?
