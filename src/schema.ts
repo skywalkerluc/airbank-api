@@ -10,7 +10,7 @@ const typeDefs = gql`
     internalId: ID!
     id: String!
     account: String
-    description: String
+    description: String?
     category: String
     reference: String
     currency: String

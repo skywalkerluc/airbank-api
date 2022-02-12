@@ -184,7 +184,7 @@ export const transactions = [
   {
     "id": "8cd2457a-1938-4da4-aea8-48f4405a9fe8",
     "account": "Sydney Beard",
-    "description": 0,
+    "description": "0",
     "category": "",
     "reference": "",
     "currency": "GBP",
