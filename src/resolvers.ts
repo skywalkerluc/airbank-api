@@ -1,5 +1,6 @@
 import { transactions } from './data/tempDatabase';
 // TODO: update to target postgres
+// TODO: rename alias from parent to "dot"
 
 const resolvers = {
   Query: {
@@ -13,6 +14,4 @@ const resolvers = {
   }
 }
 
-module.exports = {
-  resolvers
-}
+export default resolvers;

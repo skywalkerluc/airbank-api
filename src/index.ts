@@ -1,12 +1,9 @@
-import express from "express";
+import { ApolloServer } from "apollo-server";
+import typeDefs from "./schema";
+import resolvers from "./resolvers";
 
-const app = express();
-const PORT = 8080;
+const port = process.env.PORT || 8090;
 
-app.get("/", (req, res) => {
-  res.send("Getting started");
-});
+const server = new ApolloServer({ resolvers, typeDefs });
 
-app.listen(PORT, () => {
-  console.log(`Listening at http://localhost:${PORT}`);
-});
+server.listen({ port }, () => console.log(`Listening at http://localhost:${port}`));
