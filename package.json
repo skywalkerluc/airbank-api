@@ -4,7 +4,6 @@
   "description": "challenge for airbank with graphql, postgres and typescript",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon",
     "build": "rm -rf ./dist && tsc",
     "start": "npm run build && node dist/index.js"
   },
@@ -25,7 +24,7 @@
   },
   "dependencies": {
     "@prisma/client": "^3.9.2",
-    "apollo-server": "^3.6.3",
+    "apollo-server-express": "^3.6.3",
     "express": "^4.17.2",
     "graphql": "^16.3.0"
   }
