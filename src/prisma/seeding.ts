@@ -7,4 +7,9 @@ async function handler() {
   })
 }
 
-handler();
+handler().catch((error) => {
+  console.warn(error);
+  process.exit(1);
+}).finally(async () => {
+  await prisma.$disconnect();
+});
