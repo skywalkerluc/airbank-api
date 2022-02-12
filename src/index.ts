@@ -22,6 +22,6 @@ const serverSetup = async () => {
   httpServer.listen({ port }, () =>
     console.log(`Listening at http://localhost:${port}${apolloServer.graphqlPath}`)
   );
-}
+};
 
 serverSetup();

@@ -1,4 +1,3 @@
-import { transactions } from './data/tempDatabase';
 import prisma from './prisma/client';
 
 const resolvers = {
@@ -11,6 +10,6 @@ const resolvers = {
       return prisma.transaction.findMany();
     }
   }
-}
+};
 
 export default resolvers;

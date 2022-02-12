@@ -20,6 +20,6 @@ const typeDefs = gql`
     createdAt: String
     updatedAt: String
   }
-`
+`;
 
 export default typeDefs;
