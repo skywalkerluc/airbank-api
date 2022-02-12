@@ -4,11 +4,11 @@ import prisma from './prisma/client';
 const resolvers = {
   Query: {
     transactions: () => {
-      return prisma.transactions.findMany();
+      return prisma.transaction.findMany();
     },
     transactionsAtRange: (parent: any, args: any) => {
       // create filter
-      return prisma.transactions.findMany();
+      return prisma.transaction.findMany();
     }
   }
 }

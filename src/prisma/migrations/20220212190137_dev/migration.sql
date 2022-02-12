@@ -1,9 +1,9 @@
 -- CreateTable
 CREATE TABLE "Transaction" (
-    "prismaId" SERIAL NOT NULL,
+    "internalId" SERIAL NOT NULL,
     "id" TEXT NOT NULL,
     "account" TEXT NOT NULL,
-    "description" TEXT,
+    "description" TEXT NOT NULL,
     "category" TEXT,
     "reference" TEXT,
     "currency" TEXT NOT NULL,
@@ -13,5 +13,5 @@ CREATE TABLE "Transaction" (
     "createdAt" TEXT NOT NULL,
     "updatedAt" TEXT NOT NULL,
 
-    CONSTRAINT "Transaction_pkey" PRIMARY KEY ("prismaId")
+    CONSTRAINT "Transaction_pkey" PRIMARY KEY ("internalId")
 );

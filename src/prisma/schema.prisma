@@ -11,10 +11,10 @@ datasource db {
 }
 
 model Transaction {
-  prismaId        Int       @id @default(autoincrement())
+  internalId      Int       @id @default(autoincrement())
   id              String
   account         String
-  description     String?
+  description     String
   category        String?
   reference       String?
   currency        String

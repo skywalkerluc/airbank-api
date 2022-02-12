@@ -7,6 +7,7 @@ const typeDefs = gql`
   }
 
   type Transaction {
+    internalId: ID!
     id: String!
     account: String
     description: String
