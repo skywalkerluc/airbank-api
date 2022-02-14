@@ -11,8 +11,8 @@ const resolvers = {
           OR: [
             {
               transactionDate: {
-                gte: String(new Date(args.start)),
-                lte: String(new Date(args.end))
+                gte: String(new Date(args.start).toISOString()),
+                lte: String(new Date(args.end).toISOString())
               }
             },
             {
@@ -21,6 +21,9 @@ const resolvers = {
               }
             }
           ]
+        },
+        orderBy: {
+          transactionDate: 'asc'
         }
       });
     }
