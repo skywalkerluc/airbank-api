@@ -6,8 +6,23 @@ const resolvers = {
       return prisma.transaction.findMany();
     },
     transactionsAtRange: (parent: any, args: any) => {
-      // create filter
-      return prisma.transaction.findMany();
+      return prisma.transaction.findMany({
+        where: {
+          OR: [
+            {
+              transactionDate: {
+                gte: String(new Date(args.start)),
+                lte: String(new Date(args.end))
+              }
+            },
+            {
+              transactionDate: {
+                startsWith: args.end
+              }
+            }
+          ]
+        }
+      });
     }
   }
 };
